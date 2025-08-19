@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <div className="container">
       <h1>Welcome to ZibnuStore </h1>
       <p>Tempat Jual Beli Diamond murah terpercaya</p>
       <h5>Product</h5>
@@ -18,6 +19,7 @@ function App() {
         <li>UC PUBG GLOBAL</li>
         <li>Diamond Free fire</li>
       </ol>
+      </div>
     </>
   );
 }

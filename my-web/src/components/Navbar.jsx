@@ -1,15 +1,19 @@
-function Navbar() {
+function Navbar(props) {
   return (
     <nav className="navbar">
       <div className="logo">
-        <span>ZibnuStore</span>
+        <span>{props.storeName || "ZibnuStore"}</span>
       </div>
       <ul className="link">
-        <li>Beranda</li>
-        <li>Product</li>
-        <li>Jelajahi</li>
-        <li>Favorit</li>
+      {props.menuItems.map((item,index) => (
+        <li key={index}>{item}</li>
+      ))}
       </ul>
+      {props.showUserName && (
+        <div className="userInfo">
+          <span>Hello {props.userName}</span>
+        </div>
+      )}
     </nav>
   );
 }
